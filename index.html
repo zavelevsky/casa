@@ -337,6 +337,23 @@
                 justify-content: center;
             }
         }
+        
+        .lb-prev, .lb-next {
+            opacity: 0.8 !important; /* Make arrows more visible always */
+        }
+        
+        .lb-nav a.lb-prev:hover,
+        .lb-nav a.lb-next:hover {
+            opacity: 1 !important;
+        }
+    
+        .lb-data .lb-close {
+            opacity: 0.8 !important;
+        }
+    
+        .lb-data .lb-close:hover {
+            opacity: 1 !important;
+        }
     </style>
 </head>
 <body>
@@ -493,20 +510,22 @@
     </main>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script>
-        // Initialize Lightbox
+    $(document).ready(function() {
         lightbox.option({
             'resizeDuration': 200,
-            'wrapAround': true,        // Allows going from last to first image
+            'wrapAround': true,
             'albumLabel': "תמונה %1 מתוך %2",
-            'alwaysShowNavOnTouchDevices': true,  // Show nav arrows on mobile
-            'disableScrolling': true,  // Prevents page scrolling while lightbox is open
-            'fadeDuration': 200,       // Speed of image fade
-            'imageFadeDuration': 200,  // Speed of image transition
-            'positionFromTop': 50,     // Distance from top of window
-            'showImageNumberLabel': true // Show image numbers (e.g., "Image 2 of 6")
+            'alwaysShowNavOnTouchDevices': true,
+            'disableScrolling': true,
+            'fadeDuration': 200,
+            'imageFadeDuration': 200,
+            'positionFromTop': 50,
+            'showImageNumberLabel': true
         });
-    </script>
+    });
+</script>
 </body>
 </html>
