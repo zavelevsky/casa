@@ -497,8 +497,14 @@
         // Initialize Lightbox
         lightbox.option({
             'resizeDuration': 200,
-            'wrapAround': true,
-            'albumLabel': "תמונה %1 מתוך %2"
+            'wrapAround': true,        // Allows going from last to first image
+            'albumLabel': "תמונה %1 מתוך %2",
+            'alwaysShowNavOnTouchDevices': true,  // Show nav arrows on mobile
+            'disableScrolling': true,  // Prevents page scrolling while lightbox is open
+            'fadeDuration': 200,       // Speed of image fade
+            'imageFadeDuration': 200,  // Speed of image transition
+            'positionFromTop': 50,     // Distance from top of window
+            'showImageNumberLabel': true // Show image numbers (e.g., "Image 2 of 6")
         });
     </script>
 </body>
